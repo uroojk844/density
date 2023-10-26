@@ -6,7 +6,7 @@
     <MeetTheApp />
     <TimelineSection />
     <TextColumn />
-    <WorkWithUs />
+    <WorkWith />
     <Vacancies />
   </main>
 </template>

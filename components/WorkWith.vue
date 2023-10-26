@@ -1,6 +1,26 @@
 <script setup>
 const { $gsap: gsap } = useNuxtApp();
 
+const varticalCards = [
+  {
+    heading: "Learn more about who you are and where you want to go",
+    desc: "We ask the right questions to help you better understand why you do things the way you do.",
+  },
+  {
+    heading: "Play and grow together With others on the same journey",
+    desc: "Ahead feels like a game, not like a chore, See yourself grow every day towards achieving your goals!",
+  },
+  {
+    heading:
+      "Learn about practical skills that you can actually use in real life",
+    desc: "We teach you smart psychological techniques and habit-forming strategies that are easy to apply.",
+  },
+  {
+    heading: "Get support that's made for your needs",
+    desc: "We build your personal roadmap of lessons and actions towards your goals.",
+  },
+];
+
 onMounted(() => {
   gsap.from(".workwithus .left", {
     scrollTrigger: {
@@ -24,30 +44,10 @@ onMounted(() => {
     duration: 5,
   });
 });
-
-const cards = [
-  {
-    heading: "Learn more about who you are and where you want to go",
-    desc: "We ask the right questions to help you better understand why you do things the way you do.",
-  },
-  {
-    heading: "Play and grow together With others on the same journey",
-    desc: "Ahead feels like a game, not like a chore, See yourself grow every day towards achieving your goals!",
-  },
-  {
-    heading:"Learn about practical skills that you can actually use in real life",
-    desc: "We teach you smart psychological techniques and habit-forming strategies that are easy to apply.",
-  },
-  {
-    heading: "Get support that's made for your needs",
-    desc: "We build your personal roadmap of lessons and actions towards your goals.",
-  },
-];
 </script>
 
 <template>
   <section class="workwithus">
-    
     <div class="row">
       <div class="heading left">Work with us</div>
       <div class="heading right">ahead</div>
@@ -72,8 +72,8 @@ const cards = [
         </div>
       </div>
 
-      <div class="vert-scroll">
-        <div v-for="(card, index) in cards" :key="index" class="card">
+      <div class="vert_scroll">
+        <div class="card" v-for="(card, index) in varticalCards" :key="index">
           <h4>{{ card.heading }}</h4>
           <p>
             {{ card.desc }}
@@ -85,7 +85,7 @@ const cards = [
 </template>
 
 <style lang="scss" scoped>
-section {
+.workwithus {
   overflow: hidden;
   width: min(95%, 1480px);
   margin: 0 auto;
@@ -137,7 +137,7 @@ section {
   }
 }
 
-.vert-scroll {
+.vert_scroll {
   width: 400px;
   max-height: 500px;
   overflow-y: auto;

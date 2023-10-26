@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   build: {
     transpile: ['vuetify'],
   },
@@ -12,7 +12,6 @@ export default defineNuxtConfig({
         config.plugins.push(vuetify({ autoImport: true }))
       })
     },
-    //...
   ],
   vite: {
     vue: {
