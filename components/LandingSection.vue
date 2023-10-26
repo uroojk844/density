@@ -33,13 +33,13 @@
 .content {
   display: grid;
   align-content: center;
-  gap: 32px;
+  gap: 16px;
 }
 
 .jumbo {
   font-size: 60px;
   font-weight: bold;
-  max-width: 450px;
+  max-width: 500px;
 }
 
 .btn {
