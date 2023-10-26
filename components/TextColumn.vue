@@ -15,12 +15,13 @@
 <style scoped>
 .column {
   display: grid;
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   gap: 32px;
   max-width: max-content;
   margin: 0 auto;
   height: 350px;
   align-content: center;
+  padding: 16px;
 }
 
 .heading {
